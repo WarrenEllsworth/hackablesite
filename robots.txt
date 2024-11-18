@@ -1,0 +1,21 @@
+# robots.txt for Green Lawn Services website
+
+# Allow all web crawlers to access everything except admin pages
+User-agent: *
+Disallow: /admin/
+
+# Allow Googlebot full access to the website
+User-agent: Googlebot
+Disallow: 
+
+# Block all crawlers from accessing the login page
+User-agent: *
+Disallow: /admin-login.html
+
+# Block any specific bots (e.g., a bad bot or spam bot) from crawling your site
+User-agent: BadBot
+Disallow: /
+
+# Allow specific bots access to everything (optional)
+User-agent: Bingbot
+Disallow: 

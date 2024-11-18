@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Green Lawn Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Admin Login Page Styles */
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #2a7d4d;
+        }
+
+        .login-container label {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+            color: #333;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #2a7d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #1d6a3b;
+        }
+
+        .login-container .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-container .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .login-container .forgot-password a {
+            color: #2a7d4d;
+            text-decoration: none;
+        }
+
+        .login-container .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Green Lawn Services</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section class="login-container">
+            <h2>Admin Login</h2>
+            <form action="admin-dashboard.html" method="POST" onsubmit="return validateForm()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+                
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </form>
+
+            <!-- Error message for invalid login (show this if login fails) -->
+            <div class="error-message" id="error-message" style="display: none;">
+                Invalid username or password. Please try again.
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Green Lawn Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Dummy check for demonstration (replace with actual backend authentication logic)
+            if (username === "admin" && password === "password123") {
+                return true;
+            } else {
+                document.getElementById("error-message").style.display = "block";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

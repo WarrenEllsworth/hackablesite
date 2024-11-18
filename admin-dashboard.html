@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Green Lawn Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Admin Dashboard Styles */
+        .dashboard-container {
+            width: 90%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2a7d4d;
+        }
+
+        .customer-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .customer-table th,
+        .customer-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        .customer-table th {
+            background-color: #2a7d4d;
+            color: white;
+        }
+
+        .customer-table td {
+            background-color: #f9f9f9;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .add-customer-btn {
+            padding: 10px 20px;
+            background-color: #2a7d4d;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-customer-btn:hover {
+            background-color: #1d6a3b;
+        }
+
+        .action-buttons button {
+            background-color: #f39c12;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .action-buttons button:hover {
+            background-color: #e67e22;
+        }
+
+        .action-buttons .delete-btn {
+            background-color: #e74c3c;
+        }
+
+        .action-buttons .delete-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .action-buttons .view-btn {
+            background-color: #3498db;
+        }
+
+        .action-buttons .view-btn:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Green Lawn Services</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-container">
+            <h2>Customer Management Dashboard</h2>
+
+            <!-- Table to display customers -->
+            <table class="customer-table">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Service Type</th>
+                        <th>SSN</th>
+                        <th>Credit Card Number</th>
+                        <th>Bank Account</th>
+                        <th>Number of Children</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Customer 1 -->
+                    <tr>
+                        <td>Sarah Johnson</td>
+                        <td>sarah@example.com</td>
+                        <td>(555) 123-4567</td>
+                        <td>Lawn Mowing</td>
+                        <td>051-55-1634</td> <!-- SSN Placeholder -->
+                        <td>7571 4215 2209 1134</td> <!-- Credit Card Placeholder -->
+                        <td>Account #: 1122334455</td> <!-- Bank Account Placeholder -->
+                        <td>2</td> <!-- Number of Children -->
+                        <td class="action-buttons">
+                            <button class="view-btn">View</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Customer 2 -->
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>(555) 987-6543</td>
+                        <td>Weed Control</td>
+                        <td>221-54-5678</td> <!-- SSN Placeholder -->
+                        <td>1215 6651 2204 5678</td> <!-- Credit Card Placeholder -->
+                        <td>Account #: 2233445566</td> <!-- Bank Account Placeholder -->
+                        <td>1</td> <!-- Number of Children -->
+                        <td class="action-buttons">
+                            <button class="view-btn">View</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Customer 3 -->
+                    <tr>
+                        <td>Emily Turner</td>
+                        <td>emily.turner@example.com</td>
+                        <td>(555) 456-7890</td>
+                        <td>Fertilization</td>
+                        <td>179-55-7890</td> <!-- SSN Placeholder -->
+                        <td>1215 6421 1385 7890</td> <!-- Credit Card Placeholder -->
+                        <td>Account #: 3344556677</td> <!-- Bank Account Placeholder -->
+                        <td>3</td> <!-- Number of Children -->
+                        <td class="action-buttons">
+                            <button class="view-btn">View</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="button-container">
+                <button class="add-customer-btn">Add New Customer</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Green Lawn Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
